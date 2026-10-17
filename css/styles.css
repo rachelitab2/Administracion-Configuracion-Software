@@ -242,6 +242,169 @@ header {
     color: #E4E5DB;
 }
 
+/* =====================================================
+   RONALD - CALIDAD Y CONTROL
+   Estilos de: Cambios, Auditoría, Reporte y Equipo.
+   Usan las variables :root del equipo (misma paleta).
+   ===================================================== */
+
+/* ----- Control de Cambios: flujo en 5 etapas ----- */
+
+/* Texto guía debajo de la introducción */
+.pista {
+    text-align: center;
+    font-size: .9rem;
+    color: var(--accent);
+}
+
+.flujo {
+    margin-top: 2rem;
+    display: grid;
+    /* Las tarjetas se acomodan solas según el ancho de pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Cada etapa usa el estilo translúcido de .info-box */
+.paso {
+    background: rgba(255,255,255,0.08);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.paso:hover {
+    transform: translateY(-6px);
+}
+
+/* Indicador visible al navegar con teclado */
+.paso:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* Círculo con el número de la etapa */
+.paso-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--primary);
+    font-weight: 700;
+    transition: .3s;
+}
+
+.paso h3 {
+    margin-bottom: .7rem;
+}
+
+/* Se declara después de ".section p" para sobrescribir su margen */
+.paso p {
+    font-size: .95rem;
+    margin-bottom: 0;
+}
+
+/* Estado: etapa seleccionada (la pone el JS) */
+.paso.activo {
+    background: var(--secondary);
+    border-color: var(--accent);
+    transform: translateY(-6px);
+}
+
+/* Estado: etapas anteriores a la seleccionada (la pone el JS) */
+.paso.completado {
+    border-color: var(--accent);
+}
+
+.paso.completado .paso-numero {
+    background: var(--secondary);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+/* ----- Auditoría: lista dentro del bloque destacado ----- */
+
+.highlight ul {
+    padding-left: 1.2rem;
+}
+
+.highlight li {
+    margin-bottom: .6rem;
+}
+
+/* ----- Reporte de Estado: tabla de ejemplo ----- */
+
+/* Permite desplazar la tabla en pantallas pequeñas */
+.tabla-scroll {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.tabla-reporte {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-reporte caption {
+    caption-side: bottom;
+    padding-top: .8rem;
+    font-size: .85rem;
+    color: var(--accent);
+}
+
+.tabla-reporte th {
+    background: var(--accent);
+    color: var(--primary);
+    padding: .9rem 1rem;
+}
+
+.tabla-reporte td {
+    padding: .9rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* ----- Equipo: tarjetas de integrantes ----- */
+
+.equipo-intro {
+    text-align: center;
+}
+
+/* Extiende .card: centra el contenido de cada integrante */
+.miembro {
+    text-align: center;
+}
+
+/* Círculo con la inicial de cada integrante */
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: var(--accent);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Etiqueta del rol dentro de la tarjeta */
+.miembro .rol {
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+
 /* ===== CONCLUSION ===== */
 
 .conclusion {

@@ -36,6 +36,7 @@
                 <li><a href="#auditoria">Auditoría</a></li>
                 <li><a href="#reporte">Reporte</a></li>
                 <li><a href="#conclusion">Conclusión</a></li>
+                <li><a href="#equipo">Equipo</a></li>
             </ul>
 
         </nav>
@@ -383,54 +384,261 @@
 
     </section>
 
-    <!-- ================= CAMBIOS ================= -->
+    <!-- ================= CAMBIOS R ================= -->
 
-    <section id="cambios" class="section">
+    <section id="cambios" class="section section-dark">
 
-        <div class="container">
+    <div class="container">
 
-            <h2>Control de Cambios</h2>
+        <h2>Control de Cambios</h2>
 
-            <p>
-                Esta sección será desarrollada por Ronald.
-            </p>
+        <p>
+            El control de cambios es el proceso que asegura que toda
+            modificación al proyecto sea solicitada, evaluada y aprobada
+            antes de aplicarse. Así se evitan errores, conflictos entre los
+            miembros del equipo y cambios que nadie puede rastrear.
+        </p>
+
+        <!-- Pista para el usuario: el JS activa las etapas con clic -->
+        <p class="pista">Haz clic en una etapa para recorrer el proceso.</p>
+
+        <!-- Flujo en 5 etapas. tabindex="0" permite usarlas con teclado -->
+        <div class="flujo">
+
+            <article class="paso" tabindex="0" role="button">
+                <span class="paso-numero">1</span>
+                <h3>Solicitud</h3>
+                <p>
+                    Un miembro del equipo propone el cambio y explica qué
+                    quiere modificar y por qué (por ejemplo, con un Issue).
+                </p>
+            </article>
+
+            <article class="paso" tabindex="0" role="button">
+                <span class="paso-numero">2</span>
+                <h3>Evaluación</h3>
+                <p>
+                    Se analiza el impacto: qué elementos de configuración
+                    afecta, qué riesgo tiene y cuánto esfuerzo requiere.
+                </p>
+            </article>
+
+            <article class="paso" tabindex="0" role="button">
+                <span class="paso-numero">3</span>
+                <h3>Aprobación</h3>
+                <p>
+                    El responsable decide si el cambio se acepta o se
+                    rechaza (por ejemplo, al revisar un Pull Request).
+                </p>
+            </article>
+
+            <article class="paso" tabindex="0" role="button">
+                <span class="paso-numero">4</span>
+                <h3>Implementación</h3>
+                <p>
+                    El cambio aprobado se aplica en la rama correspondiente
+                    y se registra con un commit descriptivo.
+                </p>
+            </article>
+
+            <article class="paso" tabindex="0" role="button">
+                <span class="paso-numero">5</span>
+                <h3>Nueva versión</h3>
+                <p>
+                    Al integrar el cambio se genera una nueva versión
+                    identificada y el historial queda actualizado.
+                </p>
+            </article>
 
         </div>
 
-    </section>
+        <div class="highlight">
+            <h3>En la práctica con Git y GitHub</h3>
+            <p>
+                Issue (solicitud) &rarr; revisión del impacto (evaluación)
+                &rarr; Pull Request aprobado (aprobación) &rarr; commit en la
+                rama (implementación) &rarr; merge y etiqueta de versión
+                (nueva versión).
+            </p>
+        </div>
 
-    <!-- ================= AUDITORIA ================= -->
+    </div>
+
+</section>
+
+    <!-- ================= AUDITORIA R ================= -->
 
     <section id="auditoria" class="section">
 
-        <div class="container">
+    <div class="container">
 
-            <h2>Auditoría de Configuración</h2>
+        <h2>Auditoría de Configuración</h2>
 
-            <p>
-                Esta sección será desarrollada por Ronald.
-            </p>
+        <p>
+            La auditoría comprueba que el software realmente cumple lo que
+            se planificó y que los cambios se hicieron siguiendo los
+            procedimientos acordados. Complementa al control de cambios,
+            porque confirma que lo aprobado fue lo que se implementó.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Verificación</h3>
+                <p>
+                    Confirma que cada elemento de configuración coincide
+                    con lo que se definió y que el cambio solicitado se
+                    aplicó correctamente.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Revisión técnica</h3>
+                <p>
+                    Un revisor distinto del autor evalúa la calidad
+                    técnica del cambio: corrección, claridad y efectos
+                    sobre otros componentes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Seguimiento de cambios</h3>
+                <p>
+                    Se revisa el historial para asegurar que cada cambio
+                    quedó registrado y se siguieron los procedimientos
+                    de ACS.
+                </p>
+            </div>
 
         </div>
 
-    </section>
+        <div class="highlight">
+            <h3>Preguntas que debe responder una auditoría</h3>
+            <ul>
+                <li>¿Se realizó el cambio que fue aprobado?</li>
+                <li>¿Se hizo una revisión técnica del cambio?</li>
+                <li>¿Se siguieron los procedimientos del proceso ACS?</li>
+                <li>¿Quedó registrado quién, cuándo y qué se modificó?</li>
+            </ul>
+        </div>
 
-    <!-- ================= REPORTE ================= -->
+    </div>
 
-    <section id="reporte" class="section">
+</section>
 
-        <div class="container">
+    <!-- ================= REPORTE R ================= -->
 
-            <h2>Reporte de Estado</h2>
+   <section id="reporte" class="section section-dark">
 
-            <p>
-                Esta sección será desarrollada por Ronald.
-            </p>
+    <div class="container">
+
+        <h2>Reporte de Estado</h2>
+
+        <p>
+            El reporte de estado mantiene informado a todo el equipo sobre
+            la evolución de la configuración. Responde cuatro preguntas
+            sobre cada cambio registrado.
+        </p>
+
+        <div class="grid-2">
+
+            <div class="info-box">
+                <h3>¿Qué ocurrió?</h3>
+                <p>Descripción del cambio realizado en el proyecto.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>¿Quién lo hizo?</h3>
+                <p>Miembro del equipo responsable de realizar el cambio.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>¿Cuándo ocurrió?</h3>
+                <p>Fecha en que se aplicó, para reconstruir el historial.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>¿Qué se afectó?</h3>
+                <p>Archivos o secciones del proyecto que cambiaron.</p>
+            </div>
 
         </div>
 
-    </section>
+        <!-- El contenedor permite desplazar la tabla en celular -->
+        <div class="tabla-scroll">
+            <table class="tabla-reporte">
+                <caption>Ejemplo ilustrativo de un reporte de estado</caption>
+                <thead>
+                    <tr>
+                        <th>Qué ocurrió</th>
+                        <th>Quién</th>
+                        <th>Cuándo</th>
+                        <th>Qué se afectó</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Se agregó la sección Control de Cambios</td>
+                        <td>Ronald</td>
+                        <td>15/10/2026</td>
+                        <td>index.html, README.md</td>
+                    </tr>
+                    <tr>
+                        <td>Se agregó la sección Equipo</td>
+                        <td>Ronald</td>
+                        <td>15/10/2026</td>
+                        <td>index.html, styles.css</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
+    </div>
+
+</section>
+
+<!-- ================= EQUIPO (Ronald) ================= -->
+
+<section id="equipo" class="section">
+
+    <div class="container">
+
+        <h2>Nuestro Equipo</h2>
+
+        <p class="equipo-intro">
+            Cada integrante trabaja en su propia rama y se encarga de una
+            parte del proceso ACS.
+        </p>
+
+        <div class="cards">
+
+            <!-- AJUSTAR: confirmar el rol de Rachel con el grupo -->
+            <article class="card miembro">
+                <div class="avatar">R</div>
+                <h3>Rachel</h3>
+                <p class="rol">Introducción e Identificación</p>
+                <p>Define la base conceptual y los objetos de configuración.</p>
+            </article>
+
+            <article class="card miembro">
+                <div class="avatar">J</div>
+                <h3>Jo</h3>
+                <p class="rol">Control de Versiones</p>
+                <p>Explica cómo se identifican y administran las versiones.</p>
+            </article>
+
+            <article class="card miembro">
+                <div class="avatar">R</div>
+                <h3>Ronald</h3>
+                <p class="rol">Calidad y Control</p>
+                <p>Desarrolla el control de cambios, la auditoría y el reporte de estado.</p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- ================= CONCLUSION ================= -->
 
     <section id="conclusion" class="section conclusion">
