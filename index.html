@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="es">
+< lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -198,15 +198,188 @@
 
     <section id="versionado" class="section">
 
-        <div class="container">
 
-            <h2>Control de Versiones</h2>
+    <div class="container">
 
+        <h2>Control de Versiones</h2>
+
+        <p class="section-description">
+            El control de versiones permite registrar y administrar los cambios
+            realizados en los elementos de un proyecto de software. Facilita
+            consultar versiones anteriores, identificar modificaciones y trabajar
+            de manera organizada cuando participan varias personas.
+        </p>
+
+        <div class="info-box">
+            <h3>¿Por qué es importante?</h3>
             <p>
-                Esta sección será desarrollada por Jo.
+                Ayuda a mantener un historial de los cambios, recuperar versiones
+                anteriores y reducir los problemas al integrar el trabajo de
+                diferentes desarrolladores.
             </p>
+        </div>
+
+        <h3 class="subsection-title">Conceptos fundamentales</h3>
+
+        <div class="cards version-cards">
+
+            <article class="card version-card">
+                <span class="version-badge">01</span>
+                <h3>Repositorio</h3>
+                <p>
+                    Es el espacio donde se almacena y organiza el proyecto junto
+                    con el historial de sus cambios.
+                </p>
+                <button class="details-button" type="button"
+                    aria-expanded="false">
+                    Ver más
+                </button>
+                <p class="card-details" hidden>
+                    En Git, el repositorio permite registrar cambios y consultar
+                    cómo ha evolucionado el proyecto a lo largo del tiempo.
+                </p>
+            </article>
+
+            <article class="card version-card">
+                <span class="version-badge">02</span>
+                <h3>Commit</h3>
+                <p>
+                    Es un registro de los cambios realizados en un momento
+                    determinado del proyecto.
+                </p>
+                <button class="details-button" type="button"
+                    aria-expanded="false">
+                    Ver más
+                </button>
+                <p class="card-details" hidden>
+                    Cada commit incluye una referencia a los cambios registrados
+                    y un mensaje que ayuda a entender qué se modificó.
+                </p>
+            </article>
+
+            <article class="card version-card">
+                <span class="version-badge">03</span>
+                <h3>Ramas</h3>
+                <p>
+                    Permiten desarrollar funcionalidades o realizar modificaciones
+                    sin trabajar directamente sobre la rama principal.
+                </p>
+                <button class="details-button" type="button"
+                    aria-expanded="false">
+                    Ver más
+                </button>
+                <p class="card-details" hidden>
+                    Cada integrante puede trabajar en su propia rama y después
+                    integrar sus cambios al proyecto compartido.
+                </p>
+            </article>
+
+            <article class="card version-card">
+                <span class="version-badge">04</span>
+                <h3>Integración de cambios</h3>
+                <p>
+                    Consiste en incorporar al proyecto los cambios desarrollados
+                    en otras ramas.
+                </p>
+                <button class="details-button" type="button"
+                    aria-expanded="false">
+                    Ver más
+                </button>
+                <p class="card-details" hidden>
+                    En Git, merge permite combinar ramas y un pull request en
+                    GitHub permite proponer y revisar cambios antes de integrarlos.
+                </p>
+            </article>
 
         </div>
+
+        <h3 class="subsection-title">Ejemplo de trabajo con ramas</h3>
+
+        <p>
+            En este proyecto, cada integrante puede trabajar en una rama
+            independiente. Cuando sus cambios estén listos, podrán revisarse
+            e integrarse en la rama principal.
+        </p>
+
+        <div class="branch-diagram">
+
+            <div class="branch-row">
+                <span class="branch-label main-branch">main</span>
+                <div class="branch-line"></div>
+                <span class="branch-description">
+                    Rama principal del proyecto
+                </span>
+            </div>
+
+            <div class="branch-row">
+                <span class="branch-label">Rama-Rach</span>
+                <div class="branch-line"></div>
+                <span class="branch-description">
+                    Trabajo de Rachel
+                </span>
+            </div>
+
+            <div class="branch-row">
+                <span class="branch-label">Rama-Jo</span>
+                <div class="branch-line"></div>
+                <span class="branch-description">
+                    Tu sección: control de versiones
+                </span>
+            </div>
+
+            <div class="branch-row">
+                <span class="branch-label">Rama-Ronald</span>
+                <div class="branch-line"></div>
+                <span class="branch-description">
+                    Trabajo de Ronald
+                </span>
+            </div>
+
+        </div>
+
+        <p class="diagram-note">
+            Esquema ilustrativo: las ramas representan líneas de trabajo
+            independientes. No muestra el historial real de commits del repositorio.
+        </p>
+
+        <h3 class="subsection-title">Evolución de las versiones</h3>
+
+        <div class="version-timeline">
+
+            <article class="timeline-item">
+                <span class="timeline-version">Versión 1.0</span>
+                <h4>Versión inicial</h4>
+                <p>Se publica la primera versión funcional del sistema.</p>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-version">Versión 1.1</span>
+                <h4>Mejoras</h4>
+                <p>Se corrigen errores y se realizan ajustes menores.</p>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-version">Versión 2.0</span>
+                <h4>Nuevas funcionalidades</h4>
+                <p>Se incorporan cambios importantes en las capacidades del sistema.</p>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-version">Versión 3.0</span>
+                <h4>Actualización mayor</h4>
+                <p>Se presenta una nueva evolución del sistema con cambios relevantes.</p>
+            </article>
+
+        </div>
+
+        <div class="highlight">
+            <strong>Idea clave:</strong>
+            el control de versiones ayuda a conocer la evolución de un proyecto,
+            mantener un historial de cambios y coordinar el trabajo en equipo.
+        </div>
+
+    </div>
+
 
     </section>
 
